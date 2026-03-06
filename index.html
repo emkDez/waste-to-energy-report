@@ -1,0 +1,1897 @@
+
+
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Waste-to-Energy Technologies and Sustainable Waste Utilization: A Comprehensive Research Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Tiempos+Headline:wght@400;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <style>
+        :root {
+            --forest-green: #2d5016;
+            --sage-green: #7c9885;
+            --earth-brown: #8b4513;
+            --stone-gray: #6b7280;
+            --warm-white: #fefcf8;
+            --soft-beige: #f5f1eb;
+            --accent-green: #4a7c59;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--warm-white);
+            color: #1f2937;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        .tiempos {
+            font-family: 'Tiempos Headline', serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--forest-green) 0%, var(--sage-green) 50%, var(--accent-green) 100%);
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .prose-custom h2 {
+            color: var(--forest-green);
+            border-bottom: 2px solid var(--sage-green);
+            padding-bottom: 0.5rem;
+        }
+        
+        .prose-custom h3 {
+            color: var(--accent-green);
+        }
+        
+        .toc-fixed {
+            position: fixed;
+            left: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 280px;
+            max-height: 70vh;
+            overflow-y: auto;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--sage-green);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .content-main {
+            margin-left: 320px;
+            padding-right: 2rem;
+        }
+        
+        .citation {
+            color: var(--accent-green);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted var(--accent-green);
+        }
+        
+        .citation:hover {
+            background-color: var(--soft-beige);
+            border-bottom: 1px solid var(--accent-green);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, var(--soft-beige) 0%, rgba(122, 201, 145, 0.1) 100%);
+            border-left: 4px solid var(--accent-green);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .data-point {
+            background: var(--forest-green);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+            margin: 0.25rem;
+        }
+        
+        /* Mermaid diagram styling */
+        .mermaid-container {
+            display: flex;
+            justify-content: center;
+            min-height: 300px;
+            max-height: 800px;
+            background: var(--warm-white);
+            border: 2px solid var(--sage-green);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mermaid-container .mermaid {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            cursor: grab;
+            transition: transform 0.3s ease;
+            transform-origin: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            touch-action: none; /* 防止触摸设备上的默认行为 */
+            -webkit-user-select: none; /* 防止文本选择 */
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .mermaid-container .mermaid svg {
+            max-width: 100%;
+            height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .mermaid-container .mermaid:active {
+            cursor: grabbing;
+        }
+
+        .mermaid-container.zoomed .mermaid {
+            height: 100%;
+            width: 100%;
+            cursor: grab;
+        }
+
+        .mermaid-controls {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            gap: 10px;
+            z-index: 20;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mermaid-control-btn {
+            background: #ffffff;
+            border: 1px solid var(--sage-green);
+            border-radius: 6px;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: var(--forest-green);
+            font-size: 14px;
+            min-width: 36px;
+            height: 36px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mermaid-control-btn:hover {
+            background: var(--soft-beige);
+            border-color: var(--accent-green);
+            color: var(--forest-green);
+            transform: translateY(-1px);
+        }
+
+        .mermaid-control-btn:active {
+            transform: scale(0.95);
+        }
+        
+        @media (max-width: 1280px) {
+            .toc-fixed {
+                display: none;
+            }
+            .content-main {
+                margin-left: 0;
+                padding-left: 2rem;
+            }
+        }
+        
+        @media (max-width: 1024px) {
+            .mermaid-control-btn:not(.reset-zoom) {
+                display: none;
+            }
+            .mermaid-controls {
+                top: auto;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .content-main {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            .hero-gradient {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+    </style>
+  <base target="_blank">
+</head>
+
+  <body>
+    <!-- Fixed Table of Contents -->
+    <nav class="toc-fixed">
+      <h3 class="tiempos text-lg font-bold text-gray-800 mb-4">Contents</h3>
+      <ul class="space-y-2 text-sm">
+        <li>
+          <a href="#executive-summary" class="citation">Executive Summary</a>
+        </li>
+        <li>
+          <a href="#global-waste-context" class="citation">Global Waste Context</a>
+        </li>
+        <li>
+          <a href="#wte-technologies" class="citation">WtE Technologies</a>
+        </li>
+        <li>
+          <a href="#comparative-assessment" class="citation">Comparative Assessment</a>
+        </li>
+        <li>
+          <a href="#residue-valorization" class="citation">Residue Valorization</a>
+        </li>
+        <li>
+          <a href="#environmental-impact" class="citation">Environmental Impact</a>
+        </li>
+        <li>
+          <a href="#economic-analysis" class="citation">Economic Analysis</a>
+        </li>
+        <li>
+          <a href="#policy-framework" class="citation">Policy Framework</a>
+        </li>
+        <li>
+          <a href="#case-studies" class="citation">Global Case Studies</a>
+        </li>
+        <li>
+          <a href="#future-outlook" class="citation">Future Outlook</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content-main">
+      <!-- Hero Section -->
+      <header class="hero-gradient text-white py-16 px-8 rounded-2xl mb-12">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 class="tiempos text-4xl lg:text-5xl font-bold mb-6 text-shadow italic">
+                Waste-to-Energy Technologies and Sustainable Waste Utilization
+              </h1>
+              <p class="text-xl opacity-90 mb-8">
+                A comprehensive analysis of thermal conversion, biological processes, and circular economy integration
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <span class="data-point">250+ Million Tonnes/Year Capacity</span>
+                <span class="data-point">80-90% Energy Efficiency</span>
+                <span class="data-point">70% GHG Reduction</span>
+              </div>
+            </div>
+            <div class="relative">
+              <img src="https://kimi-web-img.moonshot.cn/img/preview.qiantucdn.com/d5cb3a7369b47ec5a10a0001a42b9149ea86878b.jpg!qt_w320_webp" alt="Modern waste-to-energy plant with smokestack and green surroundings" class="rounded-lg shadow-2xl opacity-90" size="large" aspect="wide" color="green" style="photo" query="waste to energy plant" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Executive Summary -->
+      <section id="executive-summary" class="prose-custom mb-16">
+        <h2 class="tiempos text-3xl font-bold mb-8">Executive Summary</h2>
+
+        <div class="highlight-box">
+          <h3 class="tiempos text-xl font-bold mb-4">Key Findings</h3>
+          <ul class="space-y-3">
+            <li><strong>Technology Performance:</strong> Modern mass-burn incineration with CHP achieves <span class="data-point">80-90% total energy efficiency</span>, generating <span class="data-point">500-700 kWh per tonne MSW</span></li>
+            <li><strong>Environmental Impact:</strong> WtE reduces GHG emissions by <span class="data-point">70%</span> compared to uncontrolled landfilling, with potential for <span class="data-point">carbon-negative performance</span> when integrated with CCS</li>
+            <li><strong>Economic Viability:</strong> Competitive with mid-range renewables when gate fees are included, particularly in markets with high landfill costs</li>
+            <li><strong>Residue Valorization:</strong> Incineration bottom ash successfully utilized in road construction, achieving <span class="data-point">70% material recovery rates</span> in advanced applications</li>
+          </ul>
+        </div>
+
+        <p class="text-lg leading-relaxed mb-6">
+          This comprehensive analysis examines waste-to-energy (WtE) technologies as critical components of sustainable waste management systems. With global municipal solid waste generation projected to reach <strong>3.4 billion tonnes annually by 2050</strong>, conventional disposal methods face capacity constraints and environmental limitations.
+        </p>
+
+        <p class="leading-relaxed mb-6">
+          WtE technologies offer integrated solutions that address waste management challenges while generating renewable energy. The portfolio includes mature thermal conversion technologies (incineration, gasification, pyrolysis), biological processes (anaerobic digestion, landfill gas recovery), and advanced systems integrating carbon capture and storage.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+          <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent-green">
+            <h4 class="tiempos font-bold text-lg mb-3">Thermal Conversion Excellence</h4>
+            <p>Modern grate incineration achieves <strong>net electrical efficiencies of 25-30%</strong> and availability factors exceeding 90%, with advanced plants in Sweden and Denmark demonstrating optimal combined heat and power performance.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-sage-green">
+            <h4 class="tiempos font-bold text-lg mb-3">Biological Process Innovation</h4>
+            <p>Anaerobic digestion with co-digestion strategies achieves <strong>biogas yields of 280-320 m³ per tonne volatile solids</strong>, with advanced upgrading technologies enabling grid injection and vehicle fuel applications.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Global Waste Context -->
+      <section id="global-waste-context" class="prose-custom mb-16">
+        <h2 class="tiempos text-3xl font-bold mb-8">Global Waste Generation and Management Context</h2>
+
+        <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+          <h3 class="tiempos text-2xl font-bold mb-6">Global Waste Generation Trends</h3>
+          <p class="mb-6">
+            Global municipal solid waste generation has reached approximately <strong>2.3 billion tonnes annually</strong>, with projections indicating <strong>3.4 billion tonnes by 2050</strong> under business-as-usual scenarios. This growth trajectory reflects continued urbanization, rising consumption, and expanding middle-class populations in emerging economies.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+            <div class="text-center p-4 bg-soft-beige rounded-lg">
+              <div class="text-3xl font-bold text-forest-green mb-2">2.3B</div>
+              <div class="text-sm text-gray-600">Current Annual Waste Generation (tonnes)</div>
+            </div>
+            <div class="text-center p-4 bg-soft-beige rounded-lg">
+              <div class="text-3xl font-bold text-forest-green mb-2">3.4B</div>
+              <div class="text-sm text-gray-600">Projected 2050 Generation (tonnes)</div>
+            </div>
+            <div class="text-center p-4 bg-soft-beige rounded-lg">
+              <div class="text-3xl font-bold text-forest-green mb-2">45%</div>
+              <div class="text-sm text-gray-600">Asia&#39;s Share of Global MSW</div>
+            </div>
+          </div>
+
+          <p class="leading-relaxed">
+            Per capita waste generation varies dramatically, from <strong>0.5-1.0 kg/day in low-income countries</strong> to <strong>1.5-2.5 kg/day in high-income OECD members</strong>, with waste composition shifting toward higher packaging and electronic waste content as incomes rise. The regional distribution is increasingly concentrated in Asia, which currently accounts for approximately 45% of global MSW and is projected to reach 55% by 2030.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="tiempos text-2xl font-bold mb-6">Waste Classification Systems</h3>
+
+          <div class="mb-8">
+            <h4 class="tiempos text-xl font-bold mb-4">Municipal Solid Waste (MSW)</h4>
+            <p class="mb-4">
+              Municipal solid waste encompasses residential, commercial, and institutional waste streams collected by or on behalf of municipal authorities. Standard classification frameworks distinguish putrescible organics, paper and cardboard, plastics, metals, glass, textiles, and miscellaneous inert materials.
+            </p>
+            <p class="leading-relaxed">
+              MSW heterogeneity presents operational challenges for WtE facilities, requiring either preprocessing for fuel homogenization (RDF/SRF production) or robust combustion control systems capable of accommodating variable feedstock. Modern mass-burn incinerators address this through moving grate designs with zone-controlled air distribution.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Regional Variations</h4>
+              <ul class="space-y-2 text-sm">
+                <li><strong>East Asia &amp; Pacific:</strong> 650 Mt/year, 0.9-1.8 kg/capita/day</li>
+                <li><strong>Europe &amp; Central Asia:</strong> 450 Mt/year, 1.4-2.0 kg/capita/day</li>
+                <li><strong>North America:</strong> 350 Mt/year, 2.0-2.3 kg/capita/day</li>
+                <li><strong>South Asia:</strong> 250 Mt/year, 0.5-0.8 kg/capita/day</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Management Challenges</h4>
+              <ul class="space-y-2 text-sm">
+                <li><strong>Rapid urbanization:</strong> Infrastructure scaling</li>
+                <li><strong>Ocean plastic:</strong> Marine pollution prevention</li>
+                <li><strong>Open dumping:</strong> Public health impacts</li>
+                <li><strong>Informal sector:</strong> Integration challenges</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WtE Technologies -->
+      <section id="wte-technologies" class="prose-custom mb-16">
+        <h2 class="tiempos text-3xl font-bold mb-8">Waste-to-Energy Technology Portfolio</h2>
+
+        <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+          <h3 class="tiempos text-2xl font-bold mb-6">Thermal Conversion Technologies</h3>
+
+          <div class="mb-8">
+            <h4 class="tiempos text-xl font-bold mb-4">Incineration (Mass Burn and RDF Co-firing)</h4>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+              <div>
+                <p class="mb-4">
+                  Modern waste incineration employs <strong>controlled combustion at 850-1,100°C</strong> with <strong>&gt;2 seconds residence time</strong> to ensure complete oxidation of organic constituents and destruction of pathogens and toxic organic compounds.
+                </p>
+                <p class="leading-relaxed">
+                  The moving grate incinerator dominates global deployment, with continuous waste feeding, progressive transport through drying, combustion, and burnout zones, and automatic ash discharge enabling &gt;90% availability with minimal preprocessing.
+                </p>
+              </div>
+              <div>
+                <img src="https://kimi-web-img.moonshot.cn/img/www.takuma.co.jp/e87b64a2b41224c7280c464712299f26cab356d6.png" alt="Waste incineration plant with moving grate system" class="rounded-lg shadow-md" size="medium" aspect="wide" style="linedrawing" query="moving grate incinerator" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+              </div>
+            </div>
+
+            <div class="bg-soft-beige p-6 rounded-lg">
+              <h5 class="font-bold mb-3">Energy Recovery Performance</h5>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                <div>
+                  <div class="text-2xl font-bold text-forest-green">500-700</div>
+                  <div class="text-sm">kWh/tonne MSW</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-bold text-forest-green">80-90%</div>
+                  <div class="text-sm">Total Efficiency (CHP)</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-bold text-forest-green">25-30%</div>
+                  <div class="text-sm">Net Electrical Efficiency</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <h4 class="tiempos text-xl font-bold mb-4">Gasification</h4>
+            <p class="mb-4">
+              Gasification converts carbonaceous materials to synthesis gas (syngas) through partial oxidation at 800-1,500°C with controlled oxygen supply (equivalence ratio 0.2-0.4), producing CO and H₂ as primary products rather than complete combustion to CO₂.
+            </p>
+            <p class="leading-relaxed">
+              The thermodynamic advantage of gasification derives from avoiding nitrogen dilution and enabling higher-efficiency power generation through combined cycles or fuel cells. Cold gas efficiency of 70-85% compares favorably with incineration steam cycle efficiency of 60-70%.
+            </p>
+          </div>
+
+          <div class="mb-8">
+            <h4 class="tiempos text-xl font-bold mb-4">Pyrolysis</h4>
+            <p class="mb-4">
+              Pyrolysis—thermal decomposition in oxygen-free conditions—produces three product phases whose relative yields are controlled by heating rate, temperature, and residence time. Fast pyrolysis (450-600°C, 1-2 seconds vapor residence) optimizes liquid bio-oil production (60-75% yield) for fuel and chemical feedstock applications.
+            </p>
+            <p class="leading-relaxed">
+              Bio-oil from fast pyrolysis is a complex mixture of oxygenated hydrocarbons with high oxygen content (35-40%), high moisture (15-30%), and low heating value (16-19 MJ/kg versus 42 MJ/kg petroleum), requiring upgrading through hydrotreating or zeolite cracking for transportation fuel compatibility.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="tiempos text-2xl font-bold mb-6">Biological Conversion Technologies</h3>
+
+          <div class="mb-8">
+            <h4 class="tiempos text-xl font-bold mb-4">Anaerobic Digestion</h4>
+            <p class="mb-4">
+              Anaerobic digestion comprises four sequential microbiological stages: hydrolysis—extracellular enzyme breakdown of polymers to monomers; acidogenesis—fermentation to volatile fatty acids, alcohols, H₂, CO₂; acetogenesis—conversion to acetate, H₂, CO₂; and methanogenesis—methane production by archaea.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+              <div class="bg-soft-beige p-4 rounded-lg">
+                <h5 class="font-bold mb-2">Wet vs Dry Digestion</h5>
+                <ul class="text-sm space-y-1">
+                  <li><strong>Wet:</strong> &lt;15% total solids, pumping enabled, proven for sewage sludge</li>
+                  <li><strong>Dry:</strong> 20-40% total solids, stackable feedstock, for source-separated organics</li>
+                </ul>
+              </div>
+              <div class="bg-soft-beige p-4 rounded-lg">
+                <h5 class="font-bold mb-2">Temperature Regimes</h5>
+                <ul class="text-sm space-y-1">
+                  <li><strong>Mesophilic:</strong> 35-40°C, robust, 20-30 days HRT</li>
+                  <li><strong>Thermophilic:</strong> 50-60°C, faster, enhanced pathogen destruction</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="leading-relaxed">
+              Syntrophic relationships between acetogenic bacteria and methanogenic archaea are critical for process stability: low hydrogen partial pressure (&lt;10⁻⁴ atm) maintained by hydrogenotrophic methanogens enables thermodynamically favorable acetate and propionate oxidation.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="tiempos text-xl font-bold mb-4">Landfill Gas Recovery</h4>
+            <p class="mb-4">
+              Landfill gas generation follows sequential biological phases: initial aerobic decomposition consuming available oxygen; transition to anaerobic conditions with acid accumulation; active methanogenesis with methane production; and eventual decline as degradable organic matter is exhausted.
+            </p>
+            <p class="leading-relaxed">
+              Global landfill methane emissions are estimated at 500-800 million tonnes CO₂-equivalent annually, representing 5-10% of total anthropogenic methane. Modern collection systems achieve 60-85% capture efficiency, with fugitive emissions and post-closure releases contributing substantial climate forcing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comparative Assessment -->
+      <section id="comparative-assessment" class="prose-custom mb-16">
+        <h2 class="tiempos text-3xl font-bold mb-8">Comparative Technology Assessment</h2>
+
+        <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+          <h3 class="tiempos text-2xl font-bold mb-6">Energy Output and Conversion Efficiency</h3>
+
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-gray-300 text-sm">
+              <thead>
+                <tr class="bg-forest-green text-white">
+                  <th class="border border-gray-300 p-3 text-left">Technology</th>
+                  <th class="border border-gray-300 p-3 text-center">Net Electricity (kWh/t waste)</th>
+                  <th class="border border-gray-300 p-3 text-center">Electrical Efficiency (%)</th>
+                  <th class="border border-gray-300 p-3 text-center">Total Energy Efficiency (%)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-white">
+                  <td class="border border-gray-300 p-3 font-medium">Grate incineration (power only)</td>
+                  <td class="border border-gray-300 p-3 text-center">500-700</td>
+                  <td class="border border-gray-300 p-3 text-center">20-25</td>
+                  <td class="border border-gray-300 p-3 text-center">20-25</td>
+                </tr>
+                <tr class="bg-soft-beige">
+                  <td class="border border-gray-300 p-3 font-medium">Grate incineration (CHP)</td>
+                  <td class="border border-gray-300 p-3 text-center">400-600</td>
+                  <td class="border border-gray-300 p-3 text-center">18-25</td>
+                  <td class="border border-gray-300 p-3 text-center font-bold">80-90</td>
+                </tr>
+                <tr class="bg-white">
+                  <td class="border border-gray-300 p-3 font-medium">Gasification + gas engine</td>
+                  <td class="border border-gray-300 p-3 text-center">600-800</td>
+                  <td class="border border-gray-300 p-3 text-center">25-35</td>
+                  <td class="border border-gray-300 p-3 text-center">60-75</td>
+                </tr>
+                <tr class="bg-soft-beige">
+                  <td class="border border-gray-300 p-3 font-medium">Gasification + combined cycle</td>
+                  <td class="border border-gray-300 p-3 text-center">700-900</td>
+                  <td class="border border-gray-300 p-3 text-center">35-45</td>
+                  <td class="border border-gray-300 p-3 text-center">70-85</td>
+                </tr>
+                <tr class="bg-white">
+                  <td class="border border-gray-300 p-3 font-medium">Anaerobic digestion</td>
+                  <td class="border border-gray-300 p-3 text-center">100-250</td>
+                  <td class="border border-gray-300 p-3 text-center">30-40</td>
+                  <td class="border border-gray-300 p-3 text-center">60-80</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-6 p-4 bg-sage-green bg-opacity-10 rounded-lg">
+            <p class="text-sm italic">
+              <strong>Key Insight:</strong> CHP configuration fundamentally alters comparative economics, with thermal energy value often exceeding electricity revenue in district heating markets. Swedish and Danish plants achieve &gt;80% total efficiency through optimized heat utilization.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+          <h3 class="tiempos text-2xl font-bold mb-6">Environmental Performance Indicators</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Greenhouse Gas Emissions Comparison</h4>
+              <div class="space-y-4">
+                <div class="border-l-4 border-red-500 pl-4">
+                  <div class="font-bold">Landfill, no gas recovery</div>
+                  <div class="text-red-600">+1,257 kg CO₂e/t waste</div>
+                </div>
+                <div class="border-l-4 border-orange-500 pl-4">
+                  <div class="font-bold">Landfill, 75% capture + flare</div>
+                  <div class="text-orange-600">+314 kg CO₂e/t waste</div>
+                </div>
+                <div class="border-l-4 border-yellow-500 pl-4">
+                  <div class="font-bold">WtE incineration, no CHP</div>
+                  <div class="text-yellow-600">+374 kg CO₂e/t waste</div>
+                </div>
+                <div class="border-l-4 border-green-500 pl-4">
+                  <div class="font-bold">WtE incineration, CHP</div>
+                  <div class="text-green-600">-770 to -570 kg CO₂e/t waste</div>
+                </div>
+                <div class="border-l-4 border-blue-500 pl-4">
+                  <div class="font-bold">WtE + CCS</div>
+                  <div class="text-blue-600">-1,200 to -1,400 kg CO₂e/t waste</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Air Pollutant Control</h4>
+              <p class="mb-4">
+                Modern WtE plants achieve emission levels substantially below regulatory limits and comparable to best-performing fossil fuel plants. The European WtE sector&#39;s 99% dioxin reduction while doubling throughput demonstrates technology improvement trajectory.
+              </p>
+              <div class="bg-soft-beige p-4 rounded-lg">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-forest-green">&gt;99%</div>
+                  <div class="text-sm">Dioxin Reduction</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="tiempos text-2xl font-bold mb-6">Economic Feasibility Analysis</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="text-center p-6 bg-soft-beige rounded-lg">
+              <div class="text-2xl font-bold text-forest-green mb-2">$400-700</div>
+              <div class="text-sm font-medium mb-2">Capital Cost per tonne annual capacity</div>
+              <div class="text-xs text-gray-600">Mass-burn incineration</div>
+            </div>
+            <div class="text-center p-6 bg-soft-beige rounded-lg">
+              <div class="text-2xl font-bold text-forest-green mb-2">$40-85</div>
+              <div class="text-sm font-medium mb-2">Operating Cost per tonne waste</div>
+              <div class="text-xs text-gray-600">Thermal WtE systems</div>
+            </div>
+            <div class="text-center p-6 bg-soft-beige rounded-lg">
+              <div class="text-2xl font-bold text-forest-green mb-2">$60-150</div>
+              <div class="text-sm font-medium mb-2">LCOE ($/MWh)</div>
+              <div class="text-xs text-gray-600">Competitive with renewables</div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h4 class="tiempos text-xl font-bold mb-4">Revenue Stream Diversity</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h5 class="font-bold mb-2">Primary Revenues</h5>
+                <ul class="text-sm space-y-1">
+                  <li>• Gate fees: $50-150/t waste</li>
+                  <li>• Electricity sales: $40-120/MWh</li>
+                  <li>• Heat sales: $20-60/MWh</li>
+                  <li>• Renewable certificates: $10-50/MWh</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="font-bold mb-2">Secondary Revenues</h5>
+                <ul class="text-sm space-y-1">
+                  <li>• Metal recovery: $5-15/t waste</li>
+                  <li>• Aggregate sales: $10-30/t processed</li>
+                  <li>• Carbon credits: Emerging markets</li>
+                  <li>• Hydrogen production: Premium value</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Residue Valorization -->
+      <section id="residue-valorization" class="prose-custom mb-16">
+        <h2 class="tiempos text-3xl font-bold mb-8">Waste Residue Valorization and Circular Economy Integration</h2>
+
+        <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+          <h3 class="tiempos text-2xl font-bold mb-6">Incineration Bottom Ash (IBA) Utilization</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Physical and Chemical Characterization</h4>
+              <p class="mb-4">
+                IBA composition reflects input waste and combustion conditions: mineral fraction (silicates, oxides, carbonates) 70-85%; metals (ferrous and non-ferrous) 5-15%; unburned carbon 1-5%; and glass/ceramics 5-15%.
+              </p>
+              <p class="leading-relaxed">
+                Chemical composition typical ranges: SiO₂ 35-50%; CaO 15-30%; Al₂O₃ 8-15%; Fe₂O₃ 5-15%; and Na₂O+K₂O 3-8%.
+              </p>
+            </div>
+            <div>
+              <img src="https://kimi-web-img.moonshot.cn/img/ars.els-cdn.com/2f8f6afd52d47e39c5777e4ccf827871bdf52d74.jpg" alt="Incinerator bottom ash aggregate samples" class="rounded-lg shadow-md" size="medium" aspect="wide" style="photo" query="incinerator bottom ash aggregate" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+            </div>
+          </div>
+
+          <div class="highlight-box">
+            <h4 class="tiempos text-lg font-bold mb-3">Singapore NEA Success Case</h4>
+            <p class="mb-3">
+              Singapore&#39;s NEA processing facility transforms <strong>500,000 tonnes of IBA annually</strong> into construction aggregates, achieving <strong>landfill cost avoidance of SGD 50-75 per tonne</strong> while producing saleable materials.
+            </p>
+            <p class="text-sm italic">
+              Processing protocol: aging (8-12 weeks), screening, metal removal, crushing/sieving, and chemical treatment for quality stabilization. Achieved soaked CBR 180-193%, substantially exceeding LTA minimum 30% for subbase.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Road Construction Applications</h4>
+              <p class="mb-4">
+                Processed IBA meets technical specifications for unbound road construction layers: California Bearing Ratio &gt;80% (typically 100-200%); resilient modulus 150-400 MPa; and frost susceptibility acceptable for most climates.
+              </p>
+              <p class="leading-relaxed">
+                European applications follow national specifications: Netherlands (RAW 2015 permits IBA in road bases); Germany (TL Gestein-StB limits to frost protection and sub-base); Denmark (extensive use with 10+ year performance validation).
+              </p>
+            </div>
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Metal Recovery Processes</h4>
+              <p class="mb-4">
+                Magnetic separation achieves &gt;90% ferrous metal recovery with conventional overband magnets and drum separators. Eddy current separation for non-ferrous metals achieves 30-50% recovery depending on particle size and liberation.
+              </p>
+              <div class="bg-soft-beige p-4 rounded-lg">
+                <div class="text-center">
+                  <div class="text-lg font-bold text-forest-green">€10-30/t waste</div>
+                  <div class="text-xs">Metal recovery revenue potential</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="tiempos text-2xl font-bold mb-6">Digestate and Biochar Utilization</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Anaerobic Digestion Digestate</h4>
+              <p class="mb-4">
+                Digestate contains plant-available nutrients: nitrogen (primarily ammonium), phosphorus, potassium, and stabilized organic matter. Typical ranges (fresh weight): total nitrogen 2.5-5.0 kg/t; P₂O₅ 1.0-2.5 kg/t; K₂O 2.0-4.0 kg/t.
+              </p>
+              <p class="leading-relaxed">
+                Direct land application is predominant utilization pathway, with nitrogen availability often superior to raw manure due to ammonium enrichment. Fertilizer replacement value: €15-40/t depending on nutrient content and local fertilizer prices.
+              </p>
+            </div>
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Pyrolysis Biochar</h4>
+              <p class="mb-4">
+                Biochar carbon stability—residence time in soil environment—varies with production conditions: centuries to millennia for high-temperature (600-700°C) biochar with high aromaticity; decades to centuries for lower-temperature products.
+              </p>
+              <p class="leading-relaxed">
+                Carbon sequestration potential: 1-3 t CO₂e per t biochar applied, with emerging carbon credit markets providing revenue streams. Meta-analyses indicate average crop yield increase of 10% with biochar application.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Environmental Impact -->
+      <section id="environmental-impact" class="prose-custom mb-16">
+        <h2 class="tiempos text-3xl font-bold mb-8">Environmental Impact and Sustainability Assessment</h2>
+
+        <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+          <h3 class="tiempos text-2xl font-bold mb-6">Life Cycle Assessment Methodology</h3>
+
+          <div class="mb-8">
+            <h4 class="tiempos text-xl font-bold mb-4">System Boundaries and Functional Units</h4>
+            <p class="mb-4">
+              LCA system boundaries for WtE critically affect comparative conclusions: attributional LCA (allocation of burdens to specific products) versus consequential LCA (system-wide effects of changes); foreground system versus background system; and temporal scope considerations.
+            </p>
+
+            <div class="bg-soft-beige p-6 rounded-lg">
+              <h5 class="font-bold mb-3">Critical Boundary Decisions</h5>
+              <ul class="text-sm space-y-2">
+                <li>• Credit for avoided landfill emissions (methane, leachate)</li>
+                <li>• Credit for displaced energy production (grid average versus marginal)</li>
+                <li>• Accounting for biogenic carbon (carbon neutral assumption versus explicit tracking)</li>
+                <li>• Inclusion of capital goods and infrastructure</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Impact Categories</h4>
+              <ul class="space-y-2 text-sm">
+                <li><strong>Climate change:</strong> GWP 100, GWP 20</li>
+                <li><strong>Acidification:</strong> SO₂-equivalent</li>
+                <li><strong>Eutrophication:</strong> PO₄-equivalent</li>
+                <li><strong>Photochemical ozone:</strong> NMVOC-equivalent</li>
+                <li><strong>Particulate matter:</strong> PM₂.₅-equivalent</li>
+                <li><strong>Human toxicity:</strong> Cancer and non-cancer</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Emerging Categories</h4>
+              <ul class="space-y-2 text-sm">
+                <li>• Land use and water use</li>
+                <li>• Circular economy indicators</li>
+                <li>• Microplastic release potential</li>
+                <li>• Biodiversity impact assessment</li>
+                <li>• Social impact categories</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+          <h3 class="tiempos text-2xl font-bold mb-6">Greenhouse Gas Balance Analysis</h3>
+
+          <div class="highlight-box">
+            <h4 class="tiempos text-lg font-bold mb-3">Carbon-Negative Potential with CCS</h4>
+            <p class="mb-3">
+              WtE integrated with carbon capture and storage achieves <strong>carbon-negative performance of -3.14 Mg CO₂ per MWh of electricity</strong>, with biogenic carbon removal creating net atmospheric CO₂ withdrawal.
+            </p>
+            <p class="text-sm italic">
+              This negative emissions potential is unique among energy technologies and strategically significant for climate mitigation, qualifying for substantial policy support in jurisdictions with clean hydrogen standards.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+            <div class="text-center p-4 bg-soft-beige rounded-lg">
+              <div class="text-2xl font-bold text-blue-600 mb-2">-70%</div>
+              <div class="text-sm">GHG Reduction vs Landfill</div>
+              <div class="text-xs text-gray-600">WtE without CCS</div>
+            </div>
+            <div class="text-center p-4 bg-soft-beige rounded-lg">
+              <div class="text-2xl font-bold text-green-600 mb-2">-90%</div>
+              <div class="text-sm">GHG Reduction with CCS</div>
+              <div class="text-xs text-gray-600">Carbon-negative potential</div>
+            </div>
+            <div class="text-center p-4 bg-soft-beige rounded-lg">
+              <div class="text-2xl font-bold text-purple-600 mb-2">-3.14</div>
+              <div class="text-sm">Mg CO₂/MWh</div>
+              <div class="text-xs text-gray-600">Net emissions with CCS</div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <h4 class="tiempos text-xl font-bold mb-4">Avoided Emissions Calculation</h4>
+            <p class="mb-4">
+              Landfill methane avoidance is major GHG benefit of WtE: uncontrolled landfill produces ~1,000 kg CO₂e/t waste; modern landfill with 75% gas capture produces ~300 kg CO₂e/t; WtE substitution avoids remaining fugitive emissions plus captures energy value.
+            </p>
+            <p class="leading-relaxed">
+              Energy displacement credit depends on marginal grid technology: coal-heavy grid (~900 g CO₂/kWh); mixed grid (~400-500 g CO₂/kWh); renewable-heavy grid (~50-150 g CO₂/kWh).
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="tiempos text-2xl font-bold mb-6">Air Quality and Environmental Protection</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Criteria Pollutant Control</h4>
+              <p class="mb-4">
+                Modern WtE plants achieve emission levels at or below most stringent standards: NOx &lt;50-100 mg/Nm³ (EU limit 200 mg/Nm³); SO₂ &lt;20-50 mg/Nm³ (limit 50 mg/Nm³); PM &lt;5-10 mg/Nm³ (limit 10 mg/Nm³).
+              </p>
+
+              <div class="bg-soft-beige p-4 rounded-lg">
+                <h5 class="font-bold mb-2">European Sector Improvement</h5>
+                <div class="text-center">
+                  <div class="text-lg font-bold text-forest-green">80%</div>
+                  <div class="text-xs">NOx emission reduction 1990-2020</div>
+                  <div class="text-xs text-gray-600">Despite capacity doubling</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Emerging Contaminants</h4>
+              <p class="mb-4">
+                PFAS in waste streams presents new challenges due to widespread presence in consumer products and thermal stability complicating destruction. Research priority includes PFAS fate in WtE systems and emission factors.
+              </p>
+              <p class="leading-relaxed">
+                Microplastics potential generation from plastic-containing wastes requires investigation of fragmentation during preprocessing and combustion, and airborne emission characterization.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h4 class="tiempos text-xl font-bold mb-4">Emission Monitoring and Transparency</h4>
+            <p class="mb-4">
+              Continuous emissions monitoring systems (CEMS) track NOx, SO₂, CO, O₂, HCl, dust, NH₃, with periodic stack testing for heavy metals, dioxins, and other parameters. European Industrial Emissions Directive mandates best available techniques compliance.
+            </p>
+            <p class="leading-relaxed">
+              Transparency initiatives include real-time emission data publication pioneered in the Netherlands, environmental permits with detailed conditions, and citizen enforcement provisions supporting social license for WtE facilities.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Economic Analysis -->
+      <section id="economic-analysis" class="prose-custom mb-16">
+        <h2 class="tiempos text-3xl font-bold mb-8">Economic and Market Analysis</h2>
+
+        <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+          <h3 class="tiempos text-2xl font-bold mb-6">Global Market Overview</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Market Size and Growth</h4>
+              <p class="mb-4">
+                Global WtE market: ~$35-40 billion annually (2023); projected growth to $50-60 billion by 2030 at 4-6% CAGR. Capacity expansion from ~300 million tonnes annual processing currently to potential doubling by 2030.
+              </p>
+              <p class="leading-relaxed">
+                Investment requirements: $150-250 billion cumulative 2024-2030 for capacity expansion and modernization, with accelerated deployment in Asia and emerging markets.
+              </p>
+            </div>
+            <div>
+              <img src="https://kimi-web-img.moonshot.cn/img/images.adsttc.com/ea367e02c26df1bdcc5bf76af5fff8fa6df4d63b.jpg" alt="Modern waste-to-energy facility exterior" class="rounded-lg shadow-md" size="medium" aspect="wide" style="photo" query="waste to energy plant exterior" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+            </div>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-gray-300 text-sm">
+              <thead>
+                <tr class="bg-forest-green text-white">
+                  <th class="border border-gray-300 p-3 text-left">Region</th>
+                  <th class="border border-gray-300 p-3 text-center">Market Share (%)</th>
+                  <th class="border border-gray-300 p-3 text-center">Growth Rate (%)</th>
+                  <th class="border border-gray-300 p-3 text-left">Technology Preference</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-white">
+                  <td class="border border-gray-300 p-3 font-medium">Europe</td>
+                  <td class="border border-gray-300 p-3 text-center">35</td>
+                  <td class="border border-gray-300 p-3 text-center">2-3</td>
+                  <td class="border border-gray-300 p-3">Grate incineration, gasification</td>
+                </tr>
+                <tr class="bg-soft-beige">
+                  <td class="border border-gray-300 p-3 font-medium">Asia-Pacific</td>
+                  <td class="border border-gray-300 p-3 text-center">40</td>
+                  <td class="border border-gray-300 p-3 text-center">8-12</td>
+                  <td class="border border-gray-300 p-3">Grate incineration, CFB</td>
+                </tr>
+                <tr class="bg-white">
+                  <td class="border border-gray-300 p-3 font-medium">North America</td>
+                  <td class="border border-gray-300 p-3 text-center">15</td>
+                  <td class="border border-gray-300 p-3 text-center">3-5</td>
+                  <td class="border border-gray-300 p-3">Mass-burn, landfill gas</td>
+                </tr>
+                <tr class="bg-soft-beige">
+                  <td class="border border-gray-300 p-3 font-medium">Middle East &amp; Africa</td>
+                  <td class="border border-gray-300 p-3 text-center">5</td>
+                  <td class="border border-gray-300 p-3 text-center">10-15</td>
+                  <td class="border border-gray-300 p-3">Emerging, technology transfer</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+          <h3 class="tiempos text-2xl font-bold mb-6">Investment and Financing Trends</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Investment Sources</h4>
+              <ul class="space-y-3">
+                <li class="flex items-center">
+                  <div class="w-4 h-4 bg-blue-500 rounded-full mr-3"></div>
+                  <div><strong>Municipal/public:</strong> 40-50% in Europe</div>
+                </li>
+                <li class="flex items-center">
+                  <div class="w-4 h-4 bg-green-500 rounded-full mr-3"></div>
+                  <div><strong>Private developers/IPPs:</strong> 30-40%</div>
+                </li>
+                <li class="flex items-center">
+                  <div class="w-4 h-4 bg-purple-500 rounded-full mr-3"></div>
+                  <div><strong>Development banks:</strong> 10-15% in emerging markets</div>
+                </li>
+                <li class="flex items-center">
+                  <div class="w-4 h-4 bg-orange-500 rounded-full mr-3"></div>
+                  <div><strong>Green bonds:</strong> 5-10%, growing rapidly</div>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Project Finance Structure</h4>
+              <div class="space-y-4">
+                <div class="bg-soft-beige p-4 rounded-lg">
+                  <div class="font-bold">Debt:Equity Ratio</div>
+                  <div class="text-lg">70:30 to 80:20</div>
+                </div>
+                <div class="bg-soft-beige p-4 rounded-lg">
+                  <div class="font-bold">Tenor</div>
+                  <div class="text-lg">15-20 years</div>
+                </div>
+                <div class="bg-soft-beige p-4 rounded-lg">
+                  <div class="font-bold">Cost of Debt</div>
+                  <div class="text-lg">4-8%</div>
+                </div>
+                <div class="bg-soft-beige p-4 rounded-lg">
+                  <div class="font-bold">Equity IRR</div>
+                  <div class="text-lg">10-15%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-soft-beige p-6 rounded-lg">
+            <h4 class="tiempos text-lg font-bold mb-3">Credit Enhancement Mechanisms</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <ul class="text-sm space-y-1">
+                <li>• Waste supply agreements with investment-grade counterparties</li>
+                <li>• Power purchase agreements or regulated tariffs</li>
+              </ul>
+              <ul class="text-sm space-y-1">
+                <li>• Completion guarantees from EPC contractors</li>
+                <li>• Political risk insurance for emerging markets</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="tiempos text-2xl font-bold mb-6">Cost Competitiveness and Employment Impact</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Comparison with Alternatives</h4>
+              <div class="space-y-4">
+                <div class="flex justify-between items-center p-3 bg-soft-beige rounded">
+                  <span class="font-medium">WtE Incineration</span>
+                  <span class="font-bold">$80-150/t</span>
+                </div>
+                <div class="flex justify-between items-center p-3 bg-gray-100 rounded">
+                  <span>Sanitary Landfill</span>
+                  <span>$30-80/t</span>
+                </div>
+                <div class="flex justify-between items-center p-3 bg-gray-100 rounded">
+                  <span>Chemical Recycling</span>
+                  <span>$200-500/t</span>
+                </div>
+              </div>
+
+              <div class="mt-6">
+                <h5 class="font-bold mb-2">Energy Cost Competitiveness</h5>
+                <div class="text-sm space-y-1">
+                  <div>WtE LCOE: $60-150/MWh</div>
+                  <div>Offshore Wind: $70-120/MWh</div>
+                  <div>Solar + Storage: $80-150/MWh</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Employment Generation</h4>
+              <p class="mb-4">
+                Employment intensity: direct jobs (1-2 per 100,000 tpa); indirect jobs (2-4 per 100,000 tpa); induced jobs (1-2 per 100,000 tpa). Total employment generation: 4-8 jobs per 100,000 tpa capacity.
+              </p>
+
+              <div class="bg-soft-beige p-4 rounded-lg">
+                <h5 class="font-bold mb-2">Skill Requirements</h5>
+                <ul class="text-sm space-y-1">
+                  <li>• Process engineering and environmental compliance</li>
+                  <li>• Operations and maintenance technical skills</li>
+                  <li>• Supply chain and logistics management</li>
+                  <li>• Administrative and support functions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Policy Framework -->
+      <section id="policy-framework" class="prose-custom mb-16">
+        <h2 class="tiempos text-3xl font-bold mb-8">Policy, Regulatory, and Institutional Framework</h2>
+
+        <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+          <h3 class="tiempos text-2xl font-bold mb-6">International Policy Context</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="text-center p-6 bg-soft-beige rounded-lg">
+              <div class="text-2xl font-bold text-blue-600 mb-2">SDG 7</div>
+              <div class="text-sm font-medium mb-2">Affordable &amp; Clean Energy</div>
+              <div class="text-xs text-gray-600">Renewable energy access in urban areas</div>
+            </div>
+            <div class="text-center p-6 bg-soft-beige rounded-lg">
+              <div class="text-2xl font-bold text-green-600 mb-2">SDG 11</div>
+              <div class="text-sm font-medium mb-2">Sustainable Cities</div>
+              <div class="text-xs text-gray-600">Municipal waste management infrastructure</div>
+            </div>
+            <div class="text-center p-6 bg-soft-beige rounded-lg">
+              <div class="text-2xl font-bold text-purple-600 mb-2">SDG 13</div>
+              <div class="text-sm font-medium mb-2">Climate Action</div>
+              <div class="text-xs text-gray-600">GHG mitigation through diversion</div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <h4 class="tiempos text-xl font-bold mb-4">Paris Agreement Integration</h4>
+            <p class="mb-4">
+              WtE included in ~30% of Nationally Determined Contributions, primarily as mitigation measure for landfill methane avoidance and renewable energy generation. Article 6 mechanisms create potential for international transfer of mitigation outcomes.
+            </p>
+            <p class="leading-relaxed">
+              Basel Convention controls hazardous waste definitions affecting WtE residues and cross-border waste shipments for energy recovery, establishing prior informed consent procedures and prohibiting exports to developing countries for disposal.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+          <h3 class="tiempos text-2xl font-bold mb-6">European Union Policy Landscape</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Waste Framework Directive</h4>
+              <p class="mb-4">
+                Waste hierarchy establishes prevention → reuse → recycling → other recovery → disposal. WtE positioned as recovery for non-recyclable fractions with R1 energy efficiency criterion (0.65 threshold for recovery classification).
+              </p>
+              <p class="leading-relaxed">
+                Recycling targets: 55% municipal waste by 2025, 60% by 2030, 65% by 2035; landfill maximum 10% by 2035, creating residual waste availability for WtE facilities.
+              </p>
+            </div>
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Renewable Energy Directive</h4>
+              <p class="mb-4">
+                RED II establishes biomass and biogas sustainability criteria with GHG savings thresholds (80% for new installations). Municipal waste partially exempt from sustainability criteria with biogenic fraction eligible for renewable energy targets.
+              </p>
+              <p class="leading-relaxed">
+                Industrial Emissions Directive mandates integrated permitting with BAT reference documents and associated emission levels, with WI BREF 2019 updating stricter requirements for new plants.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-soft-beige p-6 rounded-lg">
+            <h4 class="tiempos text-lg font-bold mb-3">ETS and CBAM Implications</h4>
+            <p class="mb-3">
+              EU ETS includes WtE plants &gt;20MW with declining free allocation and increasing auctioning. Biogenic emissions reported separately while fossil fraction subject to full carbon price, creating significant cost impact.
+            </p>
+            <p class="text-sm">
+              Carbon Border Adjustment Mechanism may affect WtE sector through indirect energy and feedstock costs, with potential future inclusion of waste-derived products affecting competitiveness.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="tiempos text-2xl font-bold mb-6">National Policy Approaches</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Extended Producer Responsibility</h4>
+              <p class="mb-4">
+                Producers financially responsible for end-of-life management with fee modulation based on design recyclability. Reduces residual waste quantity while improving calorific value for WtE.
+              </p>
+              <p class="text-sm text-gray-600">
+                Leading examples: German Packaging Ordinance, French Citeo, Dutch Afvalfonds
+              </p>
+            </div>
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Landfill Diversion</h4>
+              <p class="mb-4">
+                Landfill bans on combustible and organic waste create strong driver for WtE investment with waste supply security. Sweden achieves &lt;1% landfill through progressive policy implementation.</p>
+                  <p class="text-sm text-gray-600">
+                    Tax escalation: UK landfill tax £102.10/t (2024); Norway tax approaching prohibitive levels
+                  </p>
+            </div>
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Renewable Energy Support</h4>
+              <p class="mb-4">
+                Feed-in tariffs, premium tariffs, and contracts for difference provide revenue stability. Technology-neutral or specific competitive auctions increasingly prevalent for price discovery.
+              </p>
+              <p class="text-sm text-gray-600">
+                Certificate systems: Sweden-Norway Elcert, UK ROCs (historical), Guarantee of Origin for renewable gas
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h4 class="tiempos text-xl font-bold mb-4">Permitting and Social Acceptance</h4>
+            <p class="mb-4">
+              Environmental Impact Assessment mandatory for waste installations &gt;100 t/day with public consultation requirements. Best practice engagement includes early involvement, transparent information, and tangible community benefits.
+            </p>
+            <p class="leading-relaxed">
+              Addressing NIMBY concerns through independent health monitoring, third-party verification, and effective grievance mechanisms builds public confidence as demonstrated by high acceptance in Sweden through decades of transparent operation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Studies -->
+      <section id="case-studies" class="prose-custom mb-16">
+        <h2 class="tiempos text-3xl font-bold mb-8">Global Case Studies</h2>
+
+        <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+          <h3 class="tiempos text-2xl font-bold mb-6">Sweden: The Zero Waste Vision</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">National System Performance</h4>
+              <p class="mb-4">
+                Sweden has achieved one of the world&#39;s most efficient waste management systems with 2023 performance: total household waste 4.55 million tonnes (431 kg/capita, 4% decrease from 2022); landfill disposal only 1.5%; material recycling 24.3%; biological treatment 15.1%; and energy recovery 56%.
+              </p>
+              <p class="leading-relaxed">
+                WtE infrastructure includes 35 incineration plants with combined thermal capacity &gt;5,000 MW, processing 6.66 million tonnes for energy recovery and importing 2.2 million tonnes sorted waste from other European countries.
+              </p>
+            </div>
+            <div>
+              <img src="https://kimi-web-img.moonshot.cn/imagegen/20260306/0217727337097219badbe816172dbb331753bd21c11e8fa1a76e6_0.jpeg" alt="Waste-to-energy plant in Sweden with sustainable design" class="rounded-lg shadow-md" size="medium" aspect="wide" style="photo" query="Swedish waste-to-energy plant" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="text-center p-4 bg-soft-beige rounded-lg">
+              <div class="text-2xl font-bold text-forest-green mb-2">19.5</div>
+              <div class="text-sm">TWh total energy production</div>
+              <div class="text-xs text-gray-600">17.3 TWh heat, 2.2 TWh electricity</div>
+            </div>
+            <div class="text-center p-4 bg-soft-beige rounded-lg">
+              <div class="text-2xl font-bold text-forest-green mb-2">~90%</div>
+              <div class="text-sm">Multi-family dwellings connected to DH</div>
+              <div class="text-xs text-gray-600">Year-round heat utilization</div>
+            </div>
+            <div class="text-center p-4 bg-soft-beige rounded-lg">
+              <div class="text-2xl font-bold text-forest-green mb-2">2.2M</div>
+              <div class="text-sm">Tonnes waste imported annually</div>
+              <div class="text-xs text-gray-600">Revenue-generating service</div>
+            </div>
+          </div>
+
+          <div class="highlight-box">
+            <h4 class="tiempos text-lg font-bold mb-3">Policy Success Factors</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <ul class="text-sm space-y-1">
+                <li>• Landfill tax introduced 2000, progressively increased to &gt;€50/t</li>
+                <li>• Landfill ban on combustible waste (2002), extended to organics (2005)</li>
+              </ul>
+              <ul class="text-sm space-y-1">
+                <li>• Renewable energy certificates and tax exemptions</li>
+                <li>• Carbon pricing in transport and heating sectors</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <h4 class="tiempos text-xl font-bold mb-4">Bottom Ash Utilization Excellence</h4>
+            <p class="mb-4">
+              Slag (IBA) generation: 949,710 tonnes (2023); processing for metal recovery and construction aggregate with ferrous and non-ferrous metals to recycling and granulated slag primarily for landfill road construction with expanding general road use.
+            </p>
+            <p class="leading-relaxed">
+              Energy efficiency ~2.9 MWh per tonne waste with flue gas condensation and heat pump upgrading achieving &gt;100% apparent efficiency in optimal configurations.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+          <h3 class="tiempos text-2xl font-bold mb-6">Singapore: Integrated Urban Solution</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">NEA IBA Processing Facility</h4>
+              <p class="mb-4">
+                Singapore&#39;s National Environment Agency processing facility transforms 500,000 tonnes of IBA annually into construction aggregates, achieving landfill cost avoidance of SGD 50-75 per tonne while producing saleable materials for domestic construction market.
+              </p>
+              <p class="leading-relaxed">
+                Processing protocol includes aging (8-12 weeks), screening, metal removal, crushing/sieving, and chemical treatment for quality stabilization. Achieved soaked CBR 180-193%, substantially exceeding LTA minimum 30% for subbase.
+              </p>
+            </div>
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Technology Innovation</h4>
+              <p class="mb-4">
+                Four WtE plants with combined capacity 2,500 tonnes/day achieving &gt;90% availability and dioxin emissions &lt;0.06 ng/Nm³. Low gate fee of $19/t demonstrates economic competitiveness while maintaining environmental performance excellence. </p>
+                  <p class="leading-relaxed">
+                    Local equipment manufacturing and technology localization achieving high domestic content with export capability development.
+                  </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="tiempos text-2xl font-bold mb-6">China: Rapid Scale Development</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div class="text-center p-4 bg-soft-beige rounded-lg">
+              <div class="text-2xl font-bold text-red-600 mb-2">&gt;500</div>
+              <div class="text-sm">Plants operational</div>
+              <div class="text-xs text-gray-600">World&#39;s largest national WtE fleet</div>
+            </div>
+            <div class="text-center p-4 bg-soft-beige rounded-lg">
+              <div class="text-2xl font-bold text-red-600 mb-2">77.8</div>
+              <div class="text-sm">GW installed capacity</div>
+              <div class="text-xs text-gray-600">By 2023</div>
+            </div>
+            <div class="text-center p-4 bg-soft-beige rounded-lg">
+              <div class="text-2xl font-bold text-red-600 mb-2">70%+</div>
+              <div class="text-sm">Domestic content</div>
+              <div class="text-xs text-gray-600">Technology localization</div>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h4 class="tiempos text-xl font-bold mb-4">Development Trajectory</h4>
+            <p class="mb-4">
+              Rapid expansion from negligible capacity in 2000 to &gt;500 plants with systematic technology localization achieving 70%+ domestic content and export capability. Xiangyang sludge-to-energy project exemplifies large-scale co-digestion: 500 tonnes dry solids annually achieving biogas yield of 280-320 m³ per tonne volatile solids destroyed.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Economic Model</h4>
+              <p class="mb-4">
+                Low gate fee model with local equipment manufacturing demonstrating economic competitiveness while achieving environmental performance with dioxin emissions &lt;0.06 ng/Nm³ and availability factors exceeding 90%. </p>
+            </div>
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Technology Innovation</h4>
+              <p class="mb-4">
+                Suzhou plant (1.1 million tpa capacity) with local stoker technology achieving environmental performance comparable to European standards while maintaining economic competitiveness through technology localization and scale economies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Future Outlook -->
+      <section id="future-outlook" class="prose-custom mb-16">
+        <h2 class="tiempos text-3xl font-bold mb-8">Future Outlook and Strategic Recommendations</h2>
+
+        <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+          <h3 class="tiempos text-2xl font-bold mb-6">Emerging Technology Pathways</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Waste-to-Hydrogen</h4>
+              <p class="mb-4">
+                Hydrogen production from waste gasification with water-gas shift and separation achieves <strong>highest exergy efficiency (46.7%)</strong> among WtE pathways. The hydrogen product&#39;s premium value ($3-6/kg in emerging markets) improves project economics.
+              </p>
+              <div class="bg-soft-beige p-4 rounded-lg">
+                <div class="text-center">
+                  <div class="text-lg font-bold text-blue-600">46.7%</div>
+                  <div class="text-xs">Exergy Efficiency</div>
+                  <div class="text-xs text-gray-600">Highest among WtE pathways</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Carbon Capture Integration</h4>
+              <p class="mb-4">
+                WtE-CCS technical configurations include post-combustion amine scrubbing, oxy-fuel combustion, and pre-combustion gasification with shift. Capture costs potentially $30-60/t CO₂ for advanced configurations.
+              </p>
+              <div class="bg-soft-beige p-4 rounded-lg">
+                <div class="text-center">
+                  <div class="text-lg font-bold text-green-600">-3.14</div>
+                  <div class="text-xs">Mg CO₂/MWh</div>
+                  <div class="text-xs text-gray-600">Net emissions with CCS</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <h4 class="tiempos text-xl font-bold mb-4">Advanced Conversion Technologies</h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="bg-soft-beige p-4 rounded-lg">
+                <h5 class="font-bold mb-2">Plasma Arc Gasification</h5>
+                <p class="text-sm">Ultra-high temperature processing at 2,000-5,000°C achieving &gt;99.99% destruction removal efficiency for persistent pollutants and complete molecular dissociation.</p>
+              </div>
+              <div class="bg-soft-beige p-4 rounded-lg">
+                <h5 class="font-bold mb-2">Catalytic Pyrolysis</h5>
+                <p class="text-sm">Integration of catalysts (HZSM-5 zeolite, red mud) improving bio-oil quality with 30-40% increase in aromatic yields and oxygen reduction from 35% to &lt;20%.</p>
+              </div>
+              <div class="bg-soft-beige p-4 rounded-lg">
+                <h5 class="font-bold mb-2">Anaerobic Membrane Bioreactors</h5>
+                <p class="text-sm">AnMBR technology achieving very high biomass concentration and loading rates with enhanced process stability and biogas yield optimization.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="highlight-box">
+            <h4 class="tiempos text-lg font-bold mb-3">Smart Systems and AI Integration</h4>
+            <p class="mb-3">
+              Artificial intelligence optimization of waste sorting, combustion control, and predictive maintenance enabling enhanced operational efficiency and reduced environmental impact through real-time process optimization.
+            </p>
+            <p class="text-sm italic">
+              Machine learning applications in feedstock characterization, emissions prediction, and energy output optimization achieving 5-15% efficiency improvements in demonstration projects.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+          <h3 class="tiempos text-2xl font-bold mb-6">Strategic Recommendations</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Technology Deployment Priorities</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <div class="w-2 h-2 bg-forest-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <strong>Grate incineration with CHP:</strong> For rapidly urbanizing economies with district heating infrastructure, achieving 80-90% total energy efficiency
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="w-2 h-2 bg-forest-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <strong>Anaerobic digestion with biogas upgrading:</strong> For agricultural and organic waste-rich regions, enabling grid injection and vehicle fuel applications
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="w-2 h-2 bg-forest-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <strong>Advanced thermal conversion with CCS readiness:</strong> For developed economies pursuing deep decarbonization with carbon-negative potential
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="tiempos text-xl font-bold mb-4">Policy Framework Enhancement</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <div class="w-2 h-2 bg-accent-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <strong>Landfill diversion targets or bans:</strong> Create waste supply security and level playing field for WtE investment
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="w-2 h-2 bg-accent-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <strong>Renewable energy support mechanisms:</strong> Recognize biogenic energy content with appropriate sustainability criteria
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="w-2 h-2 bg-accent-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <strong>Carbon pricing alignment:</strong> Value avoided methane emissions and fossil fuel displacement consistently
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-soft-beige p-6 rounded-lg">
+            <h4 class="tiempos text-lg font-bold mb-3">Investment Prioritization Framework</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <h5 class="font-bold mb-2">Short-term (2025-2030)</h5>
+                <ul class="text-sm space-y-1">
+                  <li>• Grate incineration with CHP in district heating regions</li>
+                  <li>• Anaerobic digestion for organic waste streams</li>
+                  <li>• Landfill gas recovery optimization</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="font-bold mb-2">Long-term (2030-2040)</h5>
+                <ul class="text-sm space-y-1">
+                  <li>• Advanced thermal conversion with CCS integration</li>
+                  <li>• Waste-to-hydrogen demonstration and scale-up</li>
+                  <li>• AI-optimized smart waste-to-energy systems</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="tiempos text-2xl font-bold mb-6">Global Implementation Roadmap</h3>
+
+          <div class="mb-8">
+            <h4 class="tiempos text-xl font-bold mb-4">Regional Deployment Strategies</h4>
+            <div class="overflow-x-auto">
+              <table class="w-full border-collapse border border-gray-300 text-sm">
+                <thead>
+                  <tr class="bg-forest-green text-white">
+                    <th class="border border-gray-300 p-3 text-left">Region</th>
+                    <th class="border border-gray-300 p-3 text-center">Priority Technology</th>
+                    <th class="border border-gray-300 p-3 text-left">Key Enablers</th>
+                    <th class="border border-gray-300 p-3 text-left">Challenges</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-white">
+                    <td class="border border-gray-300 p-3 font-medium">Europe</td>
+                    <td class="border border-gray-300 p-3 text-center">CHP + CCS</td>
+                    <td class="border border-gray-300 p-3">ETS, district heating</td>
+                    <td class="border border-gray-300 p-3">Recycling competition</td>
+                  </tr>
+                  <tr class="bg-soft-beige">
+                    <td class="border border-gray-300 p-3 font-medium">Asia-Pacific</td>
+                    <td class="border border-gray-300 p-3 text-center">Mass-burn scale-up</td>
+                    <td class="border border-gray-300 p-3">Urbanization, policy support</td>
+                    <td class="border border-gray-300 p-3">Financing, skills</td>
+                  </tr>
+                  <tr class="bg-white">
+                    <td class="border border-gray-300 p-3 font-medium">North America</td>
+                    <td class="border border-gray-300 p-3 text-center">Landfill gas + AD</td>
+                    <td class="border border-gray-300 p-3">Regional constraints</td>
+                    <td class="border border-gray-300 p-3">Permitting complexity</td>
+                  </tr>
+                  <tr class="bg-soft-beige">
+                    <td class="border border-gray-300 p-3 font-medium">Emerging Markets</td>
+                    <td class="border border-gray-300 p-3 text-center">Modular systems</td>
+                    <td class="border border-gray-300 p-3">Waste crisis, financing</td>
+                    <td class="border border-gray-300 p-3">Infrastructure, capacity</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="highlight-box">
+            <h4 class="tiempos text-lg font-bold mb-3">Critical Success Factors for Implementation</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <ul class="text-sm space-y-1">
+                <li>• Integrated waste management planning with clear hierarchy implementation</li>
+                <li>• Long-term policy stability with 10-20 year investment horizons</li>
+                <li>• Coordinated energy market access and renewable energy recognition</li>
+              </ul>
+              <ul class="text-sm space-y-1">
+                <li>• Technical standards for residue utilization enabling market development</li>
+                <li>• Public engagement and transparent environmental performance monitoring</li>
+                <li>• Gradual implementation matching local capacity and infrastructure development</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h4 class="tiempos text-xl font-bold mb-4">Monitoring and Evaluation Framework</h4>
+            <p class="mb-4">
+              Comprehensive monitoring framework encompassing environmental performance (emissions, residue utilization, carbon footprint), economic metrics (LCOE, job creation, supply chain development), and social indicators (public acceptance, community benefits, health impacts).
+            </p>
+            <p class="leading-relaxed">
+              International cooperation through knowledge sharing, technology transfer, and harmonized performance standards enabling accelerated deployment while adapting to local contexts and constraints.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-forest-green text-white p-8 rounded-lg mt-16">
+        <div class="text-center">
+          <div class="tiempos text-2xl font-bold mb-4">Waste-to-Energy Technologies and Sustainable Waste Utilization</div>
+          <div class="text-sm opacity-75 mb-4">
+            Comprehensive Research Report • Global Analysis and Strategic Recommendations
+          </div>
+          <div class="flex flex-wrap justify-center gap-4 text-sm">
+            <span class="data-point">250+ Million Tonnes Annual Capacity</span>
+            <span class="data-point">80-90% Energy Efficiency</span>
+            <span class="data-point">70% GHG Reduction</span>
+            <span class="data-point">Carbon-Negative Potential</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+        // Initialize Mermaid
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                // Primary colors with good contrast
+                primaryColor: '#ffffff',
+                primaryTextColor: '#1f2937',
+                primaryBorderColor: '#2d5016',
+                lineColor: '#2d5016',
+                
+                // Secondary colors
+                secondaryColor: '#f5f1eb',
+                secondaryTextColor: '#1f2937',
+                secondaryBorderColor: '#4a7c59',
+                
+                // Tertiary colors
+                tertiaryColor: '#fefcf8',
+                tertiaryTextColor: '#1f2937',
+                tertiaryBorderColor: '#7c9885',
+                
+                // Background colors
+                background: '#fefcf8',
+                mainBkg: '#ffffff',
+                secondBkg: '#f5f1eb',
+                tertiaryBkg: '#fefcf8',
+                
+                // Node styling for different types with good contrast
+                cScale0: '#ffffff',
+                cScale1: '#f5f1eb', 
+                cScale2: '#ffffff',
+                cScale3: '#f5f1eb',
+                cScale4: '#ffffff',
+                
+                // Text colors for better contrast
+                cScaleLabel0: '#1f2937',
+                cScaleLabel1: '#1f2937',
+                cScaleLabel2: '#1f2937',
+                cScaleLabel3: '#1f2937',
+                cScaleLabel4: '#1f2937',
+                
+                // Accents and highlights
+                accentColor: '#4a7c59',
+                accentBorderColor: '#2d5016',
+                accentTextColor: '#ffffff',
+                
+                // Grid and axis
+                gridColor: '#e5e7eb',
+                sectionBkgColor: '#f9fafb',
+                altSectionBkgColor: '#f3f4f6',
+                
+                // Font settings
+                fontFamily: 'Inter, sans-serif',
+                fontSize: '14px',
+                fontWeight: '500',
+                
+                // Additional contrast improvements
+                nodeBorder: '2px',
+                clusterBkg: '#f9fafb',
+                clusterBorder: '#7c9885',
+                defaultLinkColor: '#2d5016',
+                titleColor: '#1f2937',
+                edgeLabelBackground: '#ffffff',
+                
+                // Ensure text is always readable
+                textColor: '#1f2937',
+                nodeTextColor: '#1f2937',
+                
+                // Special node colors with good contrast
+                fillType0: '#ffffff',
+                fillType1: '#f5f1eb',
+                fillType2: '#fefcf8',
+                fillType3: '#ffffff',
+                fillType4: '#f5f1eb',
+                fillType5: '#ffffff',
+                fillType6: '#f5f1eb',
+                fillType7: '#ffffff'
+            },
+            flowchart: {
+                useMaxWidth: false,
+                htmlLabels: true,
+                curve: 'basis',
+                padding: 20,
+                nodeSpacing: 50,
+                rankSpacing: 50,
+                diagramPadding: 20
+            },
+            fontFamily: 'Inter, sans-serif',
+            fontSize: '14px',
+            fontWeight: '500'
+        });
+
+        // Initialize Mermaid Controls for zoom and pan
+        function initializeMermaidControls() {
+            const containers = document.querySelectorAll('.mermaid-container');
+
+            containers.forEach(container => {
+            const mermaidElement = container.querySelector('.mermaid');
+            let scale = 1;
+            let isDragging = false;
+            let startX, startY, translateX = 0, translateY = 0;
+
+            // 触摸相关状态
+            let isTouch = false;
+            let touchStartTime = 0;
+            let initialDistance = 0;
+            let initialScale = 1;
+            let isPinching = false;
+
+            // Zoom controls
+            const zoomInBtn = container.querySelector('.zoom-in');
+            const zoomOutBtn = container.querySelector('.zoom-out');
+            const resetBtn = container.querySelector('.reset-zoom');
+            const fullscreenBtn = container.querySelector('.fullscreen');
+
+            function updateTransform() {
+                mermaidElement.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+
+                if (scale > 1) {
+                container.classList.add('zoomed');
+                } else {
+                container.classList.remove('zoomed');
+                }
+
+                mermaidElement.style.cursor = isDragging ? 'grabbing' : 'grab';
+            }
+
+            if (zoomInBtn) {
+                zoomInBtn.addEventListener('click', () => {
+                scale = Math.min(scale * 1.25, 4);
+                updateTransform();
+                });
+            }
+
+            if (zoomOutBtn) {
+                zoomOutBtn.addEventListener('click', () => {
+                scale = Math.max(scale / 1.25, 0.3);
+                if (scale <= 1) {
+                    translateX = 0;
+                    translateY = 0;
+                }
+                updateTransform();
+                });
+            }
+
+            if (resetBtn) {
+                resetBtn.addEventListener('click', () => {
+                scale = 1;
+                translateX = 0;
+                translateY = 0;
+                updateTransform();
+                });
+            }
+
+            if (fullscreenBtn) {
+                fullscreenBtn.addEventListener('click', () => {
+                if (container.requestFullscreen) {
+                    container.requestFullscreen();
+                } else if (container.webkitRequestFullscreen) {
+                    container.webkitRequestFullscreen();
+                } else if (container.msRequestFullscreen) {
+                    container.msRequestFullscreen();
+                }
+                });
+            }
+
+            // Mouse Events
+            mermaidElement.addEventListener('mousedown', (e) => {
+                if (isTouch) return; // 如果是触摸设备，忽略鼠标事件
+
+                isDragging = true;
+                startX = e.clientX - translateX;
+                startY = e.clientY - translateY;
+                mermaidElement.style.cursor = 'grabbing';
+                updateTransform();
+                e.preventDefault();
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging && !isTouch) {
+                translateX = e.clientX - startX;
+                translateY = e.clientY - startY;
+                updateTransform();
+                }
+            });
+
+            document.addEventListener('mouseup', () => {
+                if (isDragging && !isTouch) {
+                isDragging = false;
+                mermaidElement.style.cursor = 'grab';
+                updateTransform();
+                }
+            });
+
+            document.addEventListener('mouseleave', () => {
+                if (isDragging && !isTouch) {
+                isDragging = false;
+                mermaidElement.style.cursor = 'grab';
+                updateTransform();
+                }
+            });
+
+            // 获取两点之间的距离
+            function getTouchDistance(touch1, touch2) {
+                return Math.hypot(
+                touch2.clientX - touch1.clientX,
+                touch2.clientY - touch1.clientY
+                );
+            }
+
+            // Touch Events - 触摸事件处理
+            mermaidElement.addEventListener('touchstart', (e) => {
+                isTouch = true;
+                touchStartTime = Date.now();
+
+                if (e.touches.length === 1) {
+                // 单指拖动
+                isPinching = false;
+                isDragging = true;
+
+                const touch = e.touches[0];
+                startX = touch.clientX - translateX;
+                startY = touch.clientY - translateY;
+
+                } else if (e.touches.length === 2) {
+                // 双指缩放
+                isPinching = true;
+                isDragging = false;
+
+                const touch1 = e.touches[0];
+                const touch2 = e.touches[1];
+                initialDistance = getTouchDistance(touch1, touch2);
+                initialScale = scale;
+                }
+
+                e.preventDefault();
+            }, { passive: false });
+
+            mermaidElement.addEventListener('touchmove', (e) => {
+                if (e.touches.length === 1 && isDragging && !isPinching) {
+                // 单指拖动
+                const touch = e.touches[0];
+                translateX = touch.clientX - startX;
+                translateY = touch.clientY - startY;
+                updateTransform();
+
+                } else if (e.touches.length === 2 && isPinching) {
+                // 双指缩放
+                const touch1 = e.touches[0];
+                const touch2 = e.touches[1];
+                const currentDistance = getTouchDistance(touch1, touch2);
+
+                if (initialDistance > 0) {
+                    const newScale = Math.min(Math.max(
+                    initialScale * (currentDistance / initialDistance),
+                    0.3
+                    ), 4);
+                    scale = newScale;
+                    updateTransform();
+                }
+                }
+
+                e.preventDefault();
+            }, { passive: false });
+
+            mermaidElement.addEventListener('touchend', (e) => {
+                // 重置状态
+                if (e.touches.length === 0) {
+                isDragging = false;
+                isPinching = false;
+                initialDistance = 0;
+
+                // 延迟重置isTouch，避免鼠标事件立即触发
+                setTimeout(() => {
+                    isTouch = false;
+                }, 100);
+                } else if (e.touches.length === 1 && isPinching) {
+                // 从双指变为单指，切换为拖动模式
+                isPinching = false;
+                isDragging = true;
+
+                const touch = e.touches[0];
+                startX = touch.clientX - translateX;
+                startY = touch.clientY - translateY;
+                }
+
+                updateTransform();
+            });
+
+            mermaidElement.addEventListener('touchcancel', (e) => {
+                isDragging = false;
+                isPinching = false;
+                initialDistance = 0;
+
+                setTimeout(() => {
+                isTouch = false;
+                }, 100);
+
+                updateTransform();
+            });
+
+            // Enhanced wheel zoom with better center point handling
+            container.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                const rect = container.getBoundingClientRect();
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const delta = e.deltaY > 0 ? 0.9 : 1.1;
+                const newScale = Math.min(Math.max(scale * delta, 0.3), 4);
+
+                // Adjust translation to zoom towards center
+                if (newScale !== scale) {
+                const scaleDiff = newScale / scale;
+                translateX = translateX * scaleDiff;
+                translateY = translateY * scaleDiff;
+                scale = newScale;
+
+                if (scale <= 1) {
+                    translateX = 0;
+                    translateY = 0;
+                }
+
+                updateTransform();
+                }
+            });
+
+            // Initialize display
+            updateTransform();
+            });
+        }
+
+        // Initialize the controls
+        initializeMermaidControls();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add active state to TOC links based on scroll position
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const tocLinks = document.querySelectorAll('.toc-fixed a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('bg-green-100', 'text-green-800');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('bg-green-100', 'text-green-800');
+                }
+            });
+        });
+    </script>
+  
+
+</body></html>
